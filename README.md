@@ -1,2 +1,2 @@
 # Excel_Projects
-MY project demonstrates my skills in using functions and formulas to create an analysis dashboard
+My project demonstrates my excel skills from functions and formulas to power pivot and power query.
