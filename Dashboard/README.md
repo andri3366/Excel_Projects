@@ -44,30 +44,30 @@ The following Excel skills were utilized to complete the final analysis:
 - **Insight Gained:** This enables quick insight of the total amount of employees active in comparison to those on leave. Approximately 34.4% of employees are on leave, a relativealy high value percentage that may sugest workforce issues.
 
 ### Employees Who Have Ever Been Benched 
--**Chart Type:** A vertical bar chart
--**Functions Used:** UNIQUE(), COUNTIF(), and IF()
--**Insight:** Indicates whether or not an employee has been temporarily assigned without work, approximately 11.4% of employees have been benched. This is not directly correlated with leave status.
+- **Chart Type:** A vertical bar chart
+- **Functions Used:** UNIQUE(), COUNTIF(), and IF()
+- **Insight:** Indicates whether or not an employee has been temporarily assigned without work, approximately 11.4% of employees have been benched. This is not directly correlated with leave status.
 
 ### Employees Per City
--**Chart Type:** A vertical bar chart
--**Functions Used:** UNIQUE(), COUNTIF(), and IF()
+- **Chart Type:** A vertical bar chart
+- **Functions Used:** UNIQUE(), COUNTIF(), and IF()
   - I used two different IF() statement to determine if the selected value from the list matched another value from the UNIQUE() list. This allowed for the graph to display a different colour based on the selected value.
   ```
-=IF($B19<>cities,$C19,NA())
-=IF($B19=cities,$C19,NA())
-```
--**Features:** Dropdown list for city selection
--**Insight** Shows employee distribution across Bangalore, Pune, and New Dehli
+  =IF($B19<>cities,$C19,NA())
+  =IF($B19=cities,$C19,NA())
+  ```
+- **Features:** Dropdown list for city selection
+- **Insight** Shows employee distribution across Bangalore, Pune, and New Dehli
 
 ### Male Vs. Female Employees 
--**Chart Type:** A vertical bar chart
--**Functions Used:** UNIQUE(), COUNTIF(), and IF()
--**Features:** Dropdown list for gender selection
--**Insight** Visualizes gender representation within the company
+- **Chart Type:** A vertical bar chart
+- **Functions Used:** UNIQUE(), COUNTIF(), and IF()
+- **Features:** Dropdown list for gender selection
+- **Insight** Visualizes gender representation within the company
 
 ### Degree Types per Joining Year Based on City and Gender 
--**Chart Type:** A vertical bar chart with grouped years
--**Functions Used:** 
+- **Chart Type:** A vertical bar chart with grouped years
+- **Functions Used:** 
   - TRANSPOSE(), SORT(), UNIQUE()
     ```
     =TRANSPOSE(SORT(UNIQUE(employee[JoiningYear]),1,1))
@@ -80,11 +80,11 @@ The following Excel skills were utilized to complete the final analysis:
     (employee[[City]:[City]]=cities)* (employee[[Gender]:[Gender]]=sex)
     )
     ```
--**Insight** Tracks education distribution by joining year, filtered by gender and city
+- **Insight** Tracks education distribution by joining year, filtered by gender and city
 
 ### Employees Who Have Been Benched While Being Active or on Leave Based on City and Gender
--**Chart Type:** A multi-dimensional bar chart
--**Functions Used:** 
+- **Chart Type:** A multi-dimensional bar chart
+- **Functions Used:** 
   - TRANSPOSE(), SORT(), UNIQUE()
   - SUMPRODUCT()
     - For determining Active/Leave with Benched or Not Benched
@@ -99,11 +99,11 @@ The following Excel skills were utilized to complete the final analysis:
     (employee[[City]:[City]]=cities)*(employee[[Gender]:[Gender]]=sex)*(employee[[Leave]:[Leave]]=S$30)
     )
     ```
--**Insight:** Shows interaction between benching status, activity, city, and gender
+- **Insight:** Shows interaction between benching status, activity, city, and gender
 
 ### Employee Look Up
-**Tools:** Employee ID Search
--**Features:** Displays employee's benching status and whether they are active or on leave
+- **Tools:** Employee ID Search
+- **Features:** Displays employee's benching status and whether they are active or on leave
 
 ### Data Summary
 Quick metrics using Excel formulas
@@ -122,6 +122,7 @@ Quick metrics using Excel formulas
 ## Future Improvements
 - Build interactive visuals with Power BI
 - Add trend analysis for payment tier, education, and experience level
+
 
 
 
