@@ -1,7 +1,7 @@
 # Excel Employee Dashboard
 ## Overview
 This employee analysis dashboard was created to help a company investigate various aspects of the variety of employees within the company. 
-This data was acquired through Kaggle: https://www.kaggle.com/datasets/tawfikelmetwally/employee-dataset, which provides an analysis of data using Excel functions and formulas. The data contains detailed information on education, city, joining year, etc. are presented here. 
+This data was acquired through [Kaggle](https://www.kaggle.com/datasets/tawfikelmetwally/employee-dataset), which provides an analysis of data using Excel functions and formulas. The data contains detailed information on education, city, joining year, etc. are presented here. 
 
 ### Dashboard File
 My final dashboard is located in...
@@ -122,4 +122,5 @@ Quick metrics using Excel formulas
 ## Future Improvements
 - Build interactive visuals with Power BI
 - Add trend analysis for payment tier, education, and experience level
+
 
