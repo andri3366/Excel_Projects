@@ -105,6 +105,7 @@ The following Excel skills were utilized to complete the final analysis:
 - **Tools:** Employee ID Search
 - **Features:** Displays employee's benching status and whether they are active or on leave
 
+![Search Employees](images/Employee_Search.png)
 ### Data Summary
 Quick metrics using Excel formulas
 - Total Employees ```COUNTA()```
@@ -114,6 +115,7 @@ Quick metrics using Excel formulas
 - % of EMployees on Leave ```(COUNTIF() / COUNTA())```
 - Total Benched Employees ```COUNTIF()```
 
+![Data](images/Data.png)
 ## Data Validation 
 - Used for dropdown filters (city and gender)
 - Ensures consistent inputs
@@ -122,6 +124,7 @@ Quick metrics using Excel formulas
 ## Future Improvements
 - Build interactive visuals with Power BI
 - Add trend analysis for payment tier, education, and experience level
+
 
 
 
