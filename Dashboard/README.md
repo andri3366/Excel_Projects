@@ -4,7 +4,7 @@ This employee analysis dashboard was created to help a company investigate vario
 This data was acquired through [Kaggle](https://www.kaggle.com/datasets/tawfikelmetwally/employee-dataset), which provides an analysis of data using Excel functions and formulas. The data contains detailed information on education, city, joining year, etc. are presented here. 
 
 ### Dashboard File
-My final dashboard is located in...
+The final dashboard: [Dashboard](Employees_Dashboard.xlsx)
 
 ## The Dataset
 The dataset received from Kaggle is anonymized to protect the employees privacy, however after careful inspection it is determined the company is located in India. The dataset contains detailed information on:
@@ -122,5 +122,6 @@ Quick metrics using Excel formulas
 ## Future Improvements
 - Build interactive visuals with Power BI
 - Add trend analysis for payment tier, education, and experience level
+
 
 
