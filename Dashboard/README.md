@@ -42,12 +42,12 @@ The following Excel skills were utilized to complete the final analysis:
   =UNIQUE(employee[Leave])
   ```
 - **Insight Gained:** This enables quick insight of the total amount of employees active in comparison to those on leave. Approximately 34.4% of employees are on leave, a relativealy high value percentage that may sugest workforce issues.
-
+![Active Vs. Employees on Leave](images/Active_vs_Leave.png)
 ### Employees Who Have Ever Been Benched 
 - **Chart Type:** A vertical bar chart
 - **Functions Used:** UNIQUE(), COUNTIF(), and IF()
 - **Insight:** Indicates whether or not an employee has been temporarily assigned without work, approximately 11.4% of employees have been benched. This is not directly correlated with leave status.
-
+![Employees Benched](images/Benched.png)
 ### Employees Per City
 - **Chart Type:** A vertical bar chart
 - **Functions Used:** UNIQUE(), COUNTIF(), and IF()
@@ -58,13 +58,13 @@ The following Excel skills were utilized to complete the final analysis:
   ```
 - **Features:** Dropdown list for city selection
 - **Insight** Shows employee distribution across Bangalore, Pune, and New Dehli
-
+![Employees per City](images/City.png)
 ### Male Vs. Female Employees 
 - **Chart Type:** A vertical bar chart
 - **Functions Used:** UNIQUE(), COUNTIF(), and IF()
-- **Features:** Dropdown list for gender selection
+- **Features:** Dropdown list for gender selection with a dynamic text box displaying the total number of employees from the chosen city, filtered by the selected gender.
 - **Insight** Visualizes gender representation within the company
-
+![Male Vs Female](images/Gender.png)
 ### Degree Types per Joining Year Based on City and Gender 
 - **Chart Type:** A vertical bar chart with grouped years
 - **Functions Used:** 
@@ -81,7 +81,7 @@ The following Excel skills were utilized to complete the final analysis:
     )
     ```
 - **Insight** Tracks education distribution by joining year, filtered by gender and city
-
+![Degree per Joining Year](images/Degrees.png)
 ### Employees Who Have Been Benched While Being Active or on Leave Based on City and Gender
 - **Chart Type:** A multi-dimensional bar chart
 - **Functions Used:** 
@@ -100,7 +100,7 @@ The following Excel skills were utilized to complete the final analysis:
     )
     ```
 - **Insight:** Shows interaction between benching status, activity, city, and gender
-
+![Activity Status and Benched](images/Benched_Status.png)
 ### Employee Look Up
 - **Tools:** Employee ID Search
 - **Features:** Displays employee's benching status and whether they are active or on leave
@@ -122,6 +122,7 @@ Quick metrics using Excel formulas
 ## Future Improvements
 - Build interactive visuals with Power BI
 - Add trend analysis for payment tier, education, and experience level
+
 
 
 
