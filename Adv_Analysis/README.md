@@ -49,23 +49,63 @@ The following workbook uses the following skills:
    
 ## Analysis
 1. Which months and product/market combinations deviated most from the target profit?
-   - **Purpose:**
+   - **Purpose:** Calculate and demonstrate the variance % between the actual profit and target profit, with monthly granularity per year for a time-series analysis. 
    - **Pivot Table:**
-   - **DAX:**
-   - **Why it matters?**
+     - Rows: Month, created by extrating the year and month from the sale transaction date in Power Query
+       ```
+       Text.Combine({Text.From(Date.Year([Date])), " ", Date.MonthName([Date])})
+       ```
+      - Columns: Values
+      - Values: DAX
+        - Profit_Sum:
+          ```
+          =SUM(Coffee_Chain_Sales[Profit])
+          ```
+        - Target_Profit_Sum:
+          ```
+          =SUM(Coffee_Chain_Sales[Target_profit])
+          ```
+        - Variance_%:
+          ```
+          =DIVIDE([Profit_Variance], [Target_Profit_Sum])
+          ```
+   - **Slicers:** Year, Market, State
+   - **Why it matters?** The monthly variance allows management to act quickly as it reveals seasonality and short term underperformance.
 2. Which states consistently exceed or miss targets by quarter?
-   - **Purpose:**
+   - **Purpose:** Heat Map visual of state performance based on vairance percentage.
    - **Pivot Table:**
-   - **DAX:**
-   - **Why it matters?**
+     - Rows: State
+     - Columns: Quarter, created by extracting the year and quarter from the sale transaction date in Power Query
+       ```
+       Text.From(Date.Year([Date])) & " " & "Q" & Text.From(Date.QuarterOfYear([Date]))
+       ```
+     - Values: DAX
+       - Variance_%
+   - **Slicer:** Market Size, Market, Product
+   - **Why it matters?** 
 3. Does decaf or regular have a better gross margin based on area?
-   - **Purpose:**
+   - **Purpose:** Examine cost structure and gross margins for Regular vs Decaf across different geographic levels
    - **Pivot Table:**
-   - **DAX:**
-   - **Why it matters?**
+     - Rows: Area Hierarchy
+     - Columns: Type, Values
+     - Values: DAX
+       - Total_Cogs
+       ```
+       =SUM(Coffee_Chain_Sales[Cogs])
+       ```
+       - Gross_Margin_5
+      ```
+      =DIVIDE(([Sum_Sales] - [Total_Cogs]), [Sum_Sales])
+      ```
+   - **Slicer:** Year, Market Size
+   - **Why it matters?** It identifies regions and product types where cost control or pricing adjustments could improve margins.
 4. Which products are the biggest profit drivers each quarter, and how does that change by state?
-   - **Purpose:**
+   - **Purpose:** Use a heat map to demonstrate which products produce the largest absolute profit per quarter.
    - **Pivot Table:**
-   - **DAX:**
-   - **Why it matters?**
+     - Rows: Product
+     - Columns: Quarter
+     - Values: DAX
+       - Profit_Sum
+   - **Slicer:** State, Type
+   - **Why it matters?** 
   
