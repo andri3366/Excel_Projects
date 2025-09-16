@@ -70,7 +70,7 @@ The following workbook uses the following skills:
           =DIVIDE([Profit_Variance], [Target_Profit_Sum])
           ```
    - **Slicers:** Year, Market, State
-   - **Why it matters?** The monthly variance allows management to act quickly as it reveals seasonality and short term underperformance.
+   - **Why it matters?** The monthly variance trends reveals if the business is hitting goals or there are seasonal gaps that require short-term adjustments.
 2. Which states consistently exceed or miss targets by quarter?
    - **Purpose:** Heat Map visual of state performance based on vairance percentage.
    - **Pivot Table:**
@@ -82,7 +82,7 @@ The following workbook uses the following skills:
      - Values: DAX
        - Variance_%
    - **Slicer:** Market Size, Market, Product
-   - **Why it matters?** 
+   - **Why it matters?** Let's stakeholders instantly identify which state are consistently under- or over-performing.
 3. Does decaf or regular have a better gross margin based on area?
    - **Purpose:** Examine cost structure and gross margins for Regular vs Decaf across different geographic levels
    - **Pivot Table:**
@@ -107,5 +107,7 @@ The following workbook uses the following skills:
      - Values: DAX
        - Profit_Sum
    - **Slicer:** State, Type
-   - **Why it matters?** 
+   - **Why it matters?** Helps the business understand which products are dominating across all states, and can be filtered to determine each products contribution by and state and year.
+     
   
+
