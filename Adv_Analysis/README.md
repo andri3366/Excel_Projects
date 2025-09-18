@@ -1,7 +1,7 @@
 # Excel Employee Dashboard
 ## Overview
-This project analyzes sales performance of a coffee chain using an Excel-based dashboard.
-The dataset was retrieved on [Kaggle](https://www.kaggle.com/datasets/amruthayenikonda/coffee-chain-sales-dataset) with the goal to evaluate profitability, product performance, and market trends while comparing actual results to the business targets.
+This project analyzes the sales performance of a coffee chain using an Excel-based dashboard.
+The dataset was retrieved on [Kaggle](https://www.kaggle.com/datasets/amruthayenikonda/coffee-chain-sales-dataset) with the goal of evaluating profitability, product performance, and market trends, while comparing actual results to the business targets.
 
 ### Dashboard File
 The final analysis dashboard: [Dashboard](Adv_Analysis.xlsx)
@@ -31,6 +31,7 @@ The following workbook uses the following skills:
 - Power Query
 - Power Pivot
 - DAX (Data Analysis Expressions)
+- Conditional Formatting
 
 ## Data Preparations
 1. Extract
@@ -38,9 +39,9 @@ The following workbook uses the following skills:
      1. First with all the coffe chain sales information
      2. Data query for sales transactions
      3. Geography query for the location of each coffe chain sales
-    - **Disclamer:** The Data query and Geography query were created to practice my skills in using Power Pivot
+    - **Note:** The Date and Geography queries were built manually to demonstrate Power Pivot skills.
 2. Transform:
-   - Transformed each query by changing the column types, remove unecessary columns, add an index column, separate the date column for different purposes, and reorder columns
+   - Transformed each query by changing the column types, remove unecessary columns, added an index column to use as a primary key, separate the date column by year, quarter, and month for time series analysis, and reordered columns
 3. Load:
    - Loaded all queries into the workbook
 4. Power Pivot:
@@ -70,7 +71,8 @@ The following workbook uses the following skills:
           =DIVIDE([Profit_Variance], [Target_Profit_Sum])
           ```
    - **Slicers:** Year, Market, State
-   - **Why it matters?** The monthly variance trends reveals if the business is hitting goals or there are seasonal gaps that require short-term adjustments.
+   - **Visualization:** The combo chart of monthly variance percentages reveals seasonality and performance gaps.
+   - **Why it matters?** This reveals if the business is hitting their monthly goals or strategy adjustments are needed.
 2. Which states consistently exceed or miss targets by quarter?
    - **Purpose:** Heat Map visual of state performance based on vairance percentage.
    - **Pivot Table:**
@@ -82,7 +84,8 @@ The following workbook uses the following skills:
      - Values: DAX
        - Variance_%
    - **Slicer:** Market Size, Market, Product
-   - **Why it matters?** Let's stakeholders instantly identify which state are consistently under- or over-performing.
+   - **Visualization:** The heat map highlights strong performances (green) and poor performances (red)
+   - **Why it matters?** Let's management instantly identify which state are consistently under- or over-performing.
 3. Does decaf or regular have a better gross margin based on area?
    - **Purpose:** Examine cost structure and gross margins for Regular vs Decaf across different geographic levels
    - **Pivot Table:**
@@ -93,12 +96,13 @@ The following workbook uses the following skills:
        ```
        =SUM(Coffee_Chain_Sales[Cogs])
        ```
-       - Gross_Margin_5
+       - Gross_Margin_%
       ```
       =DIVIDE(([Sum_Sales] - [Total_Cogs]), [Sum_Sales])
       ```
    - **Slicer:** Year, Market Size
-   - **Why it matters?** It identifies regions and product types where cost control or pricing adjustments could improve margins.
+   - **Visualization:** Combo chart to compare margins for each region
+   - **Why it matters?** It identifies pricing inefficiencies and cost improvement opportunities.
 4. Which products are the biggest profit drivers each quarter, and how does that change by state?
    - **Purpose:** Use a heat map to demonstrate which products produce the largest absolute profit per quarter.
    - **Pivot Table:**
@@ -106,8 +110,13 @@ The following workbook uses the following skills:
      - Columns: Quarter
      - Values: DAX
        - Profit_Sum
-   - **Slicer:** State, Type
-   - **Why it matters?** Helps the business understand which products are dominating across all states, and can be filtered to determine each products contribution by and state and year.
+   - **Slicer:** State, Product Type
+   - **Visualization:** A heat map to highlight top profit drivers for each quarter
+   - **Why it matters?** Helps the business understand which products are dominating based on seasonal and regional performance
+
+## Key Takeaways
+- 
      
   
+
 
