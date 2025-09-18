@@ -42,10 +42,14 @@ The following workbook uses the following skills:
     - **Note:** The Date and Geography queries were built manually to demonstrate Power Pivot skills.
 2. Transform:
    - Transformed each query by changing the column types, remove unecessary columns, added an index column to use as a primary key, separate the date column by year, quarter, and month for time series analysis, and reordered columns
+
+![Sales Table](images/Coffee_Chain_Sales_Table_Query.png) ![Date Table](images/Date_Table_Query.png) ![Geo Table](images/Geo_Table_Query.png)
+
 3. Load:
    - Loaded all queries into the workbook
 4. Power Pivot:
    - Data Model: Create relationships between the three tables using the index column and add create hierarchy for the date and geography table
+     ![Power Pivot](images/Power_Pivot_Diagram_View.png)
    - Power Pivot Menu: Used to refine the data model and create measures
    
 ## Analysis
@@ -72,6 +76,7 @@ The following workbook uses the following skills:
           ```
    - **Slicers:** Year, Market, State
    - **Visualization:** The combo chart of monthly variance percentages reveals seasonality and performance gaps.
+     ![Chart 1](images/Chart_1.png)
    - **Why it matters?** This reveals if the business is hitting their monthly goals or strategy adjustments are needed.
 2. Which states consistently exceed or miss targets by quarter?
    - **Purpose:** Heat Map visual of state performance based on vairance percentage.
@@ -85,6 +90,7 @@ The following workbook uses the following skills:
        - Variance_%
    - **Slicer:** Market Size, Market, Product
    - **Visualization:** The heat map highlights strong performances (green) and poor performances (red)
+     ![Chart 2](images/Chart_2.png)
    - **Why it matters?** Let's management instantly identify which state are consistently under- or over-performing.
 3. Does decaf or regular have a better gross margin based on area?
    - **Purpose:** Examine cost structure and gross margins for Regular vs Decaf across different geographic levels
@@ -102,6 +108,7 @@ The following workbook uses the following skills:
       ```
    - **Slicer:** Year, Market Size
    - **Visualization:** Combo chart to compare margins for each region
+     ![Chart 3](images/Chart_3.png)
    - **Why it matters?** It identifies pricing inefficiencies and cost improvement opportunities.
 4. Which products are the biggest profit drivers each quarter, and how does that change by state?
    - **Purpose:** Use a heat map to demonstrate which products produce the largest absolute profit per quarter.
@@ -112,11 +119,13 @@ The following workbook uses the following skills:
        - Profit_Sum
    - **Slicer:** State, Product Type
    - **Visualization:** A heat map to highlight top profit drivers for each quarter
+    ![Chart 4](images/Chart_4.png)
    - **Why it matters?** Helps the business understand which products are dominating based on seasonal and regional performance
 
 ## Key Takeaways
 - 
      
   
+
 
 
